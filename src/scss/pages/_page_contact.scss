@@ -1,0 +1,282 @@
+.page-template-page_contact {
+	.hentry{
+		@include shift(1);
+		padding-top: 3.5rem;
+
+		@include media($laptop){
+			@include span-columns(12);
+			@include shift(0);
+			padding-top: 0rem;
+		}
+	}
+
+	h1{
+		font-size: 2rem;
+		font-weight: bold;
+		font-family: $font-family-headline;
+		line-height: 1.38;
+		letter-spacing: 0.08333rem;
+		color: $brand-blue;
+	}
+
+	.page_container{
+		.content{
+			padding-bottom: 20rem;
+			@include span-columns(5);
+			@include media($phablet){
+				@include span-columns(12);
+			}
+
+			h3{
+				padding-top: .25rem;
+				margin-bottom: 0.16666rem;
+				color: $brand-blue;
+				font-size: 1.25rem;
+				letter-spacing: 1px;
+			}
+			p{
+				font-size: 1rem;
+				font-family: $font-family-base;
+				line-height: 1.67;
+				letter-spacing: 0.08333rem;
+				color: $brand-blue;
+			}
+			.phone-mobile {
+				display: none;
+
+				a {
+					background-color: $brand-red;
+					color: white;
+					font-family: $font-family-callout;
+					font-size: 1rem;
+					font-weight: bold;
+					letter-spacing: 1px;
+					padding: 1rem;
+					text-align: center;
+					text-decoration: none;
+					@include transition(background-color 400ms);
+
+					&:hover{
+						background-color: $brand-blue-lt;
+					}
+				}
+				@include media($laptop){
+					display: block;
+					padding: 1rem 0 2rem 0;
+				}
+			}
+			.phone-number {
+				@include media($laptop){
+					display: none;
+				}
+			}
+		}
+
+		.icon_container{
+			padding-bottom: 5rem;
+		}
+
+		.social-icon{
+			margin-left: 0.8333rem;
+			display: inline-block;
+			color: white;
+			text-align: center;
+			font-size: 1.6rem;
+			height: 2.5rem;
+			width: 2.5rem;	
+			padding-top: 0.3rem;
+			background-color: $brand-blue;
+
+			@include transition(opacity 400ms);
+
+			&:hover{
+				//background-color: $brand-blue-lt;
+				opacity: .7;
+			}
+		}
+
+		.social-instagram{
+			background-color: $instagram-blue;
+		}
+
+		.social-google-plus{
+			background-color: $google-plus-red;
+		}
+
+		.social-twitter{
+			background-color: $twitter-blue;
+		}
+
+		.social-youtube{
+			background-color: $youtube-red;
+		}
+
+		.social-linkedin{
+			background-color: #0077B5;
+		}
+
+		.social-facebook{
+			margin-left: 0;
+			background-color: $facebook-blue;
+		}
+		.social-yelp{
+			background-color: #D32323;
+		}
+
+		.form{
+			@include span-columns(6);
+			padding-left: 2rem;
+
+			@include media($phablet){
+				@include span-columns(12);
+				padding-left: 0rem;
+				padding-top: 2rem;
+			}
+
+			.contact_first{
+				float: left;
+				width: 50%;
+				.validation_message,
+				gfield_description {
+					color: red;
+				}
+			}
+
+			.contact_last{
+				float: left;
+				width: 50%;
+				.validation_message,
+				gfield_description {
+					color: red;
+				}
+			}
+
+			.contact_email{
+				float: left;
+				width: 50%;
+				.validation_message,
+				gfield_description {
+					color: red;
+				}
+			}
+
+			.contact_phone{
+				float: left;
+				width: 50%;
+				.validation_message,
+				gfield_description {
+					color: red;
+				}
+			}
+
+			.contact_mls{
+				float: left;
+				width: 50%;
+			}
+
+			.contact_home{
+				float: left;
+				width: 50%;
+			}
+
+			.contact_city{
+				float: left;
+				width: 33.33333%;
+			}
+
+			.contact_state{
+				float: left;
+				width: 33.33333%;
+			}
+
+			.contact_zip{
+				float: left;
+				width: 33.33333%;
+			}
+
+			.contact_month{
+				clear: left;
+				float: left;
+				width: 33.33333%;
+			}
+
+			.contact_day{
+				float: left;
+				width: 33.33333%;
+			}
+
+			.contact_year{
+				float: left;
+				width: 33.33333%;
+			}
+
+			.contact_additional{
+				float: left;
+				width: 100%;
+			}
+
+			@include media($phablet){
+			.contact_first,
+				.contact_last,
+				.contact_email,
+				.contact_phone,
+				.contact_mls,
+				.contact_home,
+				.contact_city,
+				.contact_state,
+				.contact_zip,
+				.contact_month,
+				.contact_day,
+				.contact_year,
+				.contact_additional {
+					width: 100%;
+				}
+			}
+
+			.gfield_label{
+				display: none;
+			}
+
+			input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, select[multiple] {
+				background-color: rgba(40, 56, 69, 0.05);
+			}
+
+			.contact_date{
+				color: $brand-blue;
+				letter-spacing: 0.08333rem;	
+				line-height: 1.67;
+				font-size: 1rem;
+				font-family: $font-family-base;
+				opacity: 0.7;
+				margin-bottom: 0.08333rem;
+				
+			}
+
+			.button{
+				background-color: $brand-red;
+				color: white;
+				font-family: $font-family-callout;
+				font-size: 1rem;
+				font-weight: bold;
+				letter-spacing: 0.16666rem;
+				margin-bottom: 9.083rem;
+				height: 3.9166rem;
+				width: 15.8333rem;
+				text-transform: uppercase;
+				@include transition(background-color 400ms);
+
+				&:hover{
+					background-color: $brand-blue-lt;
+				}
+
+				@include media($phablet){
+					margin-bottom: 3.5rem;
+				}
+			}
+			.validation_error {
+				color: red;
+				font-weight: bold;
+			}
+		}
+	}
+}

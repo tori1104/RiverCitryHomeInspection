@@ -1,0 +1,4 @@
+.container {
+	@include outer-container();
+	width: $container-width;
+}

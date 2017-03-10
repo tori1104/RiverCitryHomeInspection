@@ -1,0 +1,79 @@
+/*----------------------------------------------------------------------
+  FONTS
+----------------------------------------------------------------------*/
+$font-family-base:     'Open Sans';
+$font-weight-base:     400;
+$font-family-headline: 'Istok Web';
+$font-weight-headline: 600;
+$font-family-callout:  'Montserrat';
+$font-size-base:       12px;
+$line-height-base:     1.66rem;
+
+/*----------------------------------------------------------------------
+  COLORS
+----------------------------------------------------------------------*/
+$facebook-blue:    #3c5b9b;
+$google-plus-red:  #f63d27;
+$instagram-blue:   #517fa4;
+$makespace-orange: #f18903;
+$pinterest-red:    #cb2027;
+$twitter-blue:     #2daae1;
+$youtube-red:      #e14e42;
+
+$brand-red: #dd371b;
+$brand-blue: #293845;
+$brand-blue-lt: #95e2f4;
+
+
+/*----------------------------------------------------------------------
+  FORMS
+----------------------------------------------------------------------*/
+$form-element-spacing: 1rem;
+$input-border-color:   #ddd;
+$input-border-radius:  0.25rem;
+$input-border-width:   1px;
+$input-padding:        0.5rem;
+
+
+/*----------------------------------------------------------------------
+  CONTAINERS & GRID
+----------------------------------------------------------------------*/
+$column-width:        60px;
+$gutter-width:        20px;
+$grid-columns:        12;
+$container-max-width: 960px;
+$container-width:     85%;
+$design-width:        1400px;
+$visual-grid:         false;
+
+
+
+/*----------------------------------------------------------------------
+  BREAKPOINTS
+----------------------------------------------------------------------*/
+$phablet:  new-breakpoint(max-width 640px);
+$tablet:   new-breakpoint(max-width 768px);
+$laptop:   new-breakpoint(max-width 1024px);
+$desktop:  new-breakpoint(max-width 1280px);
+$phablet-min:  new-breakpoint(640px);
+$tablet-min:   new-breakpoint(768px);
+$laptop-min:   new-breakpoint(1024px);
+$desktop-min:  new-breakpoint(1280px);
+$fullsize: new-breakpoint($design-width);
+
+
+
+/*----------------------------------------------------------------------
+  CALCULATIONS & STANDARDS
+  You should not have to edit anything below this line. If so and you
+  believe it's a problem with or enhancement to the framework, be sure
+  to create an issue on Github:
+
+  https://github.com/makespaceweb/makespace-child/issues
+
+----------------------------------------------------------------------*/
+$border-box-sizing:  true;
+$column:             $column-width;
+$fa-font-path:       'fonts';
+$gutter:             $gutter-width;
+$max-width:          #{$container-max-width/$font-size-base}rem;

@@ -1,0 +1,627 @@
+.home {
+/*----------------------------------------------------------------------
+  HERO
+----------------------------------------------------------------------*/
+	.hero-home {
+		position: relative;
+
+		.svg-hero{
+			bottom: 0;
+			position: absolute;
+			width: 100%;
+
+			@include media($laptop){
+				display: none;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				padding-top: 5.37109375%;
+			}
+
+			svg {
+				bottom: 0;
+				display: block;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 100%;
+			}
+
+			path {
+				display: block;
+				fill: #fff;
+			}
+		}
+		.hero-img {
+			background-position: center center;
+			background-size: cover;
+			color: #fff;
+			height: 50rem;
+			padding: 2.5rem 0;
+			position: relative;
+			z-index: 0;
+
+			&:before {
+				background-color: rgba(29, 38, 45, 0.8);
+				content: '';
+				display: block;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: -1;
+			}
+		}
+
+		.hero_slider_container {
+			padding: 18rem 0 0 0;
+			position: relative;
+
+			@include media($laptop){
+				padding: 0;
+				margin: 18rem auto 0 auto;
+			}
+
+			.slick-arrow {
+				background-color: transparent;
+   				border-radius: 50%;
+				color: white;
+				font-size: 3rem;
+				line-height: 0;
+				padding: 0 1rem;
+				position: absolute;
+				top: 30%;
+				transition: all 0.5s ease;
+				z-index: 1;
+			}
+			.slick-prev {
+			}
+
+			.slick-next {
+				right: 0;
+			}
+
+			.slick-dots {
+				float: right;
+				list-style: none;
+				text-align: center;
+				top: 0;
+				transform: translateY(-100%);
+
+				@include media($laptop){
+					float: none;
+					transform: translateY(100%);
+				}
+
+				li {
+					cursor: pointer;
+					line-height: 0;
+					padding: .3rem 0;
+					@include media($laptop) {
+						display: inline-block;
+						cursor: pointer;
+						line-height: 0;
+						padding: 0 .3rem;
+					}
+
+					button {
+						background: transparent;
+						border: .2rem solid white;
+						border-radius: 50px;
+						color: transparent;
+						height: 1rem;
+						line-height: 0;
+						padding: 0;
+						transition: background-color 1s ease;
+						width: 1rem;
+
+						&:hover {
+							background: #fff;
+						}
+					}
+					&.slick-active {
+						button {
+							background-color: #fff;
+							border: none;
+						}
+					}
+				}
+			}
+			.hero_slider {
+				overflow: hidden;
+				padding: 0 1rem;
+				@include media($laptop){
+					text-align: center;
+					padding: 0 3rem;
+				}
+
+				.hero_header_text {
+					float: left;
+					font-family: $font-family-headline;
+					font-size: 3rem;
+					font-weight: bold;
+					height: auto;
+					letter-spacing: 1px;
+					line-height: 1.06;
+					text-align: left;
+					width: 52rem;
+					@include span-columns(9);
+
+					@include media($laptop){
+						text-align: center;
+						@include span-columns(12);
+						display: block;
+						float: none;
+					}
+					@include media($tablet){
+						font-size: 1.5rem;
+					}
+
+					@include media($phablet){
+						@include span-columns(12);
+					}
+				}
+
+				.hero_sub_text {
+					clear: left;
+					float: left;
+					font-family: $font-family-base;
+					font-size: 1.16rem;
+					letter-spacing: 1.2px;
+					line-height: 1.57;
+					padding: 1rem 0;
+					width: 45rem;
+					@include span-columns(7);
+
+					@include media($laptop){
+						@include span-columns(12);
+						display: block;
+						float: none;
+					}
+					@include media($tablet){
+						font-size: .8rem;
+					}
+					@include media($phablet){
+						padding: 1rem 2rem;
+						width: 100%;
+					}
+				}
+
+				.hero_button {
+					clear: left;
+					float: left;
+					@include media($laptop){
+						float: none;
+					}
+					
+					a {
+						background-color: $brand-red;
+						color: white;
+						display: inline-block;
+						font-family: $font-family-callout;
+						font-size: 1rem;
+						letter-spacing: .15rem;
+						padding: 1rem;
+						text-decoration: none;
+						text-transform: uppercase;
+						transition: all 0.5s ease;
+						@include media($laptop){
+							padding: 1rem 3rem;
+						}
+						&:hover {
+							background-color: $brand-blue-lt;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.nav-bc {
+		display: none;
+	}
+
+/*----------------------------------------------------------------------
+  BANNER-ABOUT-REVIEW
+----------------------------------------------------------------------*/
+	.banner-review-section {
+		@include clearfix;
+		position: relative;
+
+		.about-section {
+			background-position: center center;
+			background-size: cover;
+			background-image: url("images/RCHI_Background.jpg");
+			background-repeat: no-repeat;
+			position: relative;
+
+			.container {
+				position: relative;
+			}
+		}
+
+		.about-content {
+			padding: 2rem 0;
+			@include media($laptop-min){
+				@include span-columns(6);
+				@include shift(6);
+				padding: 2rem 0 15rem;
+			}
+			@include media($laptop){
+				text-align: center;
+			}
+		}
+
+		.about_header {
+			color: $brand-blue;
+			font-family: $font-family-headline;
+			font-size: 2rem;
+			font-weight: bold;
+			line-height: 1.38;
+			letter-spacing: 1px;
+			padding: 0 0 1rem 0;
+		}
+
+		.signature_image {
+			padding: 1rem 0;
+		}
+
+		.about_text {
+			color: $brand-blue;
+			font-family: $font-family-base;
+			font-size: 1rem;
+			line-height: 1.67;
+			letter-spacing: 1px;
+		}
+
+		.about_rchi_button {
+			button {
+				background-color: $brand-red;
+				color: white;
+				font-family: $font-family-callout;
+				font-size: 1rem;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				padding: 1.3rem 4rem;
+				transition: all 0.5s ease;
+				&:hover {
+					background-color: $brand-blue-lt;
+				}
+			}
+		}
+
+		.about-image {
+			@include media($laptop-min){
+				@include span-columns(6);
+				bottom: 0;
+				left: 0;
+				position: absolute;
+			}
+			@include media($laptop){
+				position: relative;
+				//height: 25.75;
+				//width: 32.416rem;
+			}
+			img {
+				display: block;
+				@include media($laptop){
+					margin: auto;
+				}
+			}
+		}
+
+		.review-inner {
+			@include clearfix;
+			background: $brand-blue;
+			color: #fff;
+			position: relative;
+
+			.review-home {
+				padding: 3rem 0 8rem;
+				@include media($laptop){
+					padding: 0;
+				}
+			}
+
+			.quote {
+				font-family: $font-family-headline;
+				font-size: 1.66rem;
+				font-weight: bold;
+				line-height: 1.45;
+				@include media($laptop){
+					font-size: 1.5rem;
+					padding: 0 4rem;
+				}
+				@include media($phablet){
+					font-size: 1rem;
+					padding: 0 1rem;
+				}
+			}
+
+			.author-container {
+				@include media($laptop){
+					padding-left: 4rem;
+				}
+				@include media($phablet){
+					padding-left: 1rem;
+				}
+				.author {
+					float: left;
+					font-family: $font-family-base;
+					font-size: 1rem;
+					line-height: 1.67;
+					letter-spacing: 1px;
+
+					@include media($laptop){
+						font-size: .75rem;
+					}
+				}
+				.dash {
+					background-color: #95e2f4;
+					float: left;
+					width: 2rem;
+					height: .1rem;
+					margin-top: .8rem;
+					margin-right: 1rem;
+				}
+			}
+
+			.quotes{
+				background-image: url(images/quote.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				display: inline-block;
+				position: relative;
+				height: 2.55rem;
+				width: 1.16666rem;
+				float: left;
+				top: 4rem;
+    			left: 10rem;
+
+    			@include media($laptop){
+					top: 2.5rem;
+					left: 2.4rem;
+				}
+
+				@include media($phablet){
+					height: 2rem;
+					width: .8rem;
+				}
+
+				&:after{
+					content: '';
+					background-image: url(images/quote.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					display: inline-block;
+					position: absolute;
+					left: 200%;
+					top: 0;
+					height: 2.55rem;
+					width: 1.16666rem;
+					@include media($phablet){
+						height: 2rem;
+						width: .8rem;
+					}
+				}
+			}
+		}
+
+		.svg-review {
+			top: 5px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			@include transform(translateY(-100%));
+
+			@include media($laptop-min){
+				width: 70%;
+			}
+			@include media($laptop){
+				display: none;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				padding-top: 8.029197080291971%;
+			}
+			svg {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+			path {
+				display: block;
+				fill: $brand-blue;
+			}
+		}
+
+		.review-left {
+			top: 1rem;
+			@include media($laptop){
+				padding: 2rem 4rem;
+			}
+			@include media($laptop-min){
+				float: right;
+				margin-right: 40%;
+				width: $container-max-width/2;
+			}
+
+			.slick-dots {
+				bottom: 30%;
+				float: right;
+				position: absolute;
+				right: 0;
+				transform: translateY(-100%);
+				
+				li {
+					display: inline-block;
+					cursor: pointer;
+					line-height: 0;
+					padding: 0 .3rem;
+					
+					@include media($laptop){
+						display: none;
+					}
+
+					button {
+						background: transparent;
+						border: .2rem solid white;
+						border-radius: 50px;
+						color: transparent;
+						height: 1rem;
+						line-height: 0;
+						padding: 0;
+						transition: background-color 1s ease;
+						width: 1rem;
+
+						&:hover {
+							background: #95e2f4;
+							border: .2rem solid #95e2f4;
+						}
+					}
+					&.slick-active {
+						button {
+							background-color: #95e2f4;
+							border: none;
+						}
+					}
+				}
+			}
+		}
+
+		.leave-review-container {
+			background-position: center center;
+			background-size: cover;
+			color: #fff;
+			display: block;
+			position: relative;
+
+			@include media($laptop-min){
+				bottom: 0;
+				position: absolute;
+				right: 0;
+				width: 30%;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				padding-top: 70%;
+
+				@include media($laptop){
+					padding-top: 20%;
+				}
+
+				@include media($laptop-min){
+					padding-top: 0;
+				}
+			}
+
+			.leave-review-svg-top {
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: -2px;
+				z-index: 2;
+
+				&:before {
+					content: '';
+					display: block;
+					padding-top: 16.224188790560472%;
+				}
+
+				@include media($laptop){
+					display: none;
+				}
+
+				svg {
+					bottom: 0;
+					height: 100%;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 100%;
+				}
+
+				path {
+					fill: #fff;
+					@include media($laptop){
+						fill: $brand-blue;
+					}
+				}
+			}
+			.leave-review {
+				padding: 0 7.5%;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+				width: 100%;
+				z-index: 2;
+				@include transform(translateY(-50%));
+			}
+
+			.overlay {
+				background: rgba($brand-red, 0.8);
+				display: block;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				@include transition(background 400ms);
+			}
+
+			&:hover,
+			&:focus {
+				.overlay {
+					background: rgba($brand-red, 0.9);
+				}
+			}
+		}
+
+		.about-bottom-svg {
+			bottom: -2px;
+			left: 0;
+			position: absolute;
+			right: 0;
+			width: 100%;
+
+			@include media($laptop){
+				display: none;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				padding-top: 5.371%;
+			}
+
+			svg {
+				bottom: 0;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 100%;
+			}
+			path {
+				fill: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,174 @@
+.page-template-page_reviews {
+	.hentry{
+		@include span-columns(10)
+		@include shift(1)
+
+		@include media($laptop){
+			@include span-columns(12)
+			@include shift(0)
+			padding-top: 0;
+		}
+
+		padding-top: 4.25rem;
+		padding-bottom: 4.25rem;
+
+		a{
+			display: inline;
+			text-decoration: none;
+			color: $brand-red;
+			@include transition(color 400ms);
+			
+			&:hover{
+				color: $brand-blue-lt;
+			}
+		}
+	}
+
+	.title_container{
+		width: 100%;
+		position: relative;
+
+		@include media($phablet){
+			margin-bottom: 3.33rem;
+		}
+		
+		h1{
+			display: inline;
+			letter-spacing: 0.083333rem;
+			font-size: 2rem;
+
+			@include media($phablet){
+				position: relative;
+				display: block;
+			}
+		}
+
+		.bc{
+			display: inline;
+			position: absolute;
+			font-family: $font-family-headline;
+			float: right;
+			letter-spacing: .1666rem;
+			top: 50%;
+			transform: translateY(-50%);
+			text-transform: uppercase;
+			color: $brand-red;
+			right: 0;
+			font-size: 1rem;
+
+			@include media($phablet){
+				position: relative;
+				float: left;
+			}
+		}
+	}
+
+	.page_content{
+		display: block;
+	}
+
+	.review_container{
+		@include clearfix;
+		border: solid 0.25rem #293845;
+		padding: 2.25rem 0;
+		margin: 2.25rem 0;
+
+		.review{
+			@include span-columns(10 of 11)
+			@include shift(1.10)
+
+			.quotes{
+			  @include span-columns(1 of 11);
+			  background-image: url(images/quote.png);
+			  background-repeat: no-repeat;
+			  background-size: contain;
+			  display: inline-block;
+			  position: relative;
+			  height: 2.55rem;
+			  width: 1.16666rem;
+
+			  	@include media($phablet){
+					@include span-columns(1);
+					margin-bottom: 1rem;
+				}
+
+			  &:after{
+			  content: '';
+			  background-image: url(images/quote.png);
+			  background-repeat: no-repeat;
+			  background-size: contain;
+			  display: inline-block;
+			  position: absolute;
+			  left: 200%;
+			  top: 0;
+			  height: 2.55rem;
+			  width: 1.16666rem;
+
+				  @include media($phablet){
+						left: 2rem;
+					}
+			  }
+			}
+
+			.review_content{
+				@include span-columns(10 of 11);
+				@include shift(0.75);
+				padding-left: -0.5rem;
+				width: 71%;
+				font-size: 1.45rem;
+				font-weight: bold;
+				font-family: 'Istok Web';
+				line-height: 1.45;
+				color: rgba(41, 56, 69, 0.75);
+
+				@include media($phablet){
+					@include span-columns(9.5 of 11);
+				}
+			}
+
+			.review_title{
+				@include span-columns(10 of 11);
+				@include shift(1.25);
+				font-family: 'Open Sans';
+				font-size: 1rem;
+				line-height: 1.67;
+				padding-top: 0.75rem;
+				letter-spacing: 0.0833rem;
+				color: rgba(41, 56, 69, 0.7);
+
+				@include media($phablet){
+					@include shift(1);
+				}
+				
+				&:before{
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 2.14166rem;
+					height: 0.1666rem; 
+					background-color: #95e2f4;
+				}
+			}
+		}
+	}
+
+	.breadcrumbs_container{
+		font-family: $font-family-headline;
+		letter-spacing: .1666rem;
+		text-transform: uppercase;
+		font-size: 1rem;
+		position: relative;
+		
+		.pagination{
+			position: absolute; 
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.older{
+			position: absolute; 
+			left: 100%;
+			transform: translateX(-100%);
+		}
+	}
+}

@@ -1,0 +1,366 @@
+.hentry{
+	.scrolled &{
+		padding-top: 0;
+	}
+}
+
+#ocn-inner{
+	.phone-mobile{
+		padding: 1.5rem 1.5rem;
+		.sub-menu {
+			ul {
+				float:	left;
+			}
+		}
+		a {
+			background-color: $brand-red;
+			color: white;
+			font-family: $font-family-callout;
+			font-size: 1rem;
+			font-weight: bold;
+			letter-spacing: 1px;
+			padding: 1rem;
+			text-align: center;
+			text-decoration: none;
+			@include transition(background-color 400ms);
+
+			&:hover{
+				background-color: $brand-blue-lt;
+			}
+		}
+	}
+}
+.site-header {
+	background-size: cover;
+	background-position: center center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 0;
+
+	&:before {
+		position: absolute;
+		content:" ";
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		display: block;
+		z-index: -1;
+		background-color: rgba(29, 38, 45, 0.8);
+	}
+
+	.home & {
+		background-color: transparent;
+		@include transition(background-color 400ms);
+		z-index: 1;
+		&:before {
+    		background-color: transparent;
+    	}
+	}
+
+	.scrolled & {
+		background-color: white;
+    	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+    	z-index:999;
+    	&:before {
+    		background-color: white;
+    	}
+	}
+
+	.left {
+		float: left;
+		position: relative;
+		padding: 2rem 0;
+		@include transition(padding 400ms);
+
+		.scrolled &{
+			padding: .2rem;
+			position: absolute;
+		}
+
+		@include media($laptop){
+			padding: 1rem 0;
+			height: 10rem;
+			@include transition(height 400ms, padding 400ms);
+		}
+
+		img{
+			width: 12rem;
+			@include transition(width 400ms);
+
+			.scrolled &{
+				width: 8.3rem;
+				height: 8.3rem;
+				@include transition(width 400ms);
+
+				@include media($laptop){
+					width: 9rem;
+					@include transition(width 400ms);
+				}
+			}
+		}
+	}
+
+	.inner {
+		position: relative;
+		@include transition(padding 400ms);
+		.scrolled & {
+			
+		}
+		.nav-bc {
+			bottom: 0;
+			right: 0;
+			opacity: 0.4;
+			position: absolute;
+			.scrolled & {
+				display: none;
+			}
+
+			a {
+				color:white;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			ul {
+				font-size: 0;
+
+			}
+
+			@include media ($laptop){
+				display: none;
+			}
+
+			li {
+				color: white;
+				display: inline-block;
+				font-size: .83rem;
+
+
+			    &:before {
+		    		content: '|';
+		    		margin: 0 0.5rem;
+				}
+
+				&:first-child:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.right {
+		float: right;
+		position: relative;
+		padding: 6rem 0 3rem 0;
+		@include transition(padding 400ms);
+
+		.scrolled &{
+			padding: 0;
+		}
+
+		@include media($laptop){
+			display: none;
+		}
+
+		ul {
+			background-color: rgba(255, 255, 255, 0.4);
+			font-size: 0;
+		    list-style-type: none;
+			margin: 0;
+		    text-align: center;
+		    .scrolled & {
+				background-color: white;
+			}
+		}
+
+		li {
+			font-size: 1rem;
+		    display: inline-block;
+		    letter-spacing: .083rem;
+		    line-height: 3.91rem;
+		    position: relative;
+		    &:hover {
+		    	.sub-menu {
+    				display: block;
+    				max-height: 500px;
+    				@include transition(ease 600ms);
+    				.scrolled & {
+						background-color: $brand-blue-lt;
+					}
+		    	}
+    		}
+
+		    .sub-menu {
+    			position: absolute;
+    			height: auto;
+    			overflow: hidden;
+    			max-height: 0;
+    			top: 100%;
+    			min-width: 100%;
+    			left: 50%;
+    			transform: translateX(-50%);
+    			z-index: 99;
+    			li {
+		    		font-size: 1rem;
+		   			&:before,
+		    		&:after {
+		    			display: none;
+		    		}
+
+		    		a {
+		    			padding: 1rem 2rem;
+		    			.scrolled & {
+		    				color: white;
+		    			}
+			    		&:hover {
+			    			.scrolled & {
+			    				color: $brand-blue;
+			    				@include transition(ease 400ms);
+			    			}
+			    		}
+		    		}
+		    	}
+		    }
+
+		    a {
+		    	color: white;
+		    	display: block;
+		    	padding: .6rem 2rem;
+		    	white-space: nowrap;
+		    	.scrolled & {
+					color: #293845;
+				}
+		    }
+
+		    &:before,
+	    	&:after {
+	    		background-color: white;
+	    		content: '';
+	    		display: block;
+	    		height: .5rem;
+	    		left: 0;
+	    		width: 0;
+	    		position: absolute;
+	    		@include transition(width 400ms);
+	    		.scrolled &{
+					background-color: $brand-blue-lt;
+				}
+	    	}
+
+    		&:before {
+	    		bottom: 100%;
+	    	}
+
+	    	&:after {
+	    		top: 100%;
+	    	}
+
+	    	&.menu-item-has-children:after {
+	    		display: none;
+	    	}
+
+		    &:hover {
+		    	&:before,
+		    	&:after {
+		    		width: 100%;
+		    	}
+		    }
+		}
+
+		.tn-contact {
+	    	background-color: $brand-red;
+	    	font-weight: bold;
+	    	letter-spacing: .16rem;
+	    	padding: 0 1rem;
+	    	text-transform: uppercase;
+	    	transition: all 0.5s ease;
+	    	a {
+	    		.scrolled & {
+					color: white;
+				}
+	    	}
+
+	    	&:hover {
+	    		background-color: #95e2f4;
+
+	    		&:before {
+	    			border-bottom: 3rem solid #95e2f4;
+	    		}
+		    }
+
+	    	&:before {
+	    		background-color: transparent;
+	    		height: 0;
+	    		left: 50%;
+	    		width: 0;
+				border-left: 5.8rem solid transparent;
+				border-right: 5.8rem solid transparent;
+				border-bottom: 3rem solid $brand-red;
+				@include transform(translateX(-50%));
+				transition: all 0.5s ease;
+				.scrolled & {
+					display: none;
+				}
+	    	}
+
+	    	&:after {
+	    		display: none;
+    		}
+		}
+	}
+
+	.right-ocn {
+		float: right;
+		position: relative;
+		padding: 6rem 0;
+		display: none;
+		.scrolled &{
+			color: $brand-blue;
+		}
+
+		@include media($laptop) .scrolled &{
+			padding: 4rem 0;
+			@include transition(padding 400ms);
+		}
+
+		@include media($laptop){
+				display: block;
+		}
+
+		.hamburger {
+		    position: relative;
+		    display: inline-block;
+		    width: 2rem;
+		    height: 0.8rem;
+		    margin-right: 1rem;
+		    border-top: 0.2rem solid #fff;
+		    border-bottom: 0.2rem solid #fff;
+		    background-color: transparent;
+
+		    .scrolled &{
+		    	border-top-color: $brand-blue;
+		    	border-bottom-color: $brand-blue;
+		    }
+
+		    &:before {
+			    content: "";
+			    position: absolute;
+			    top: 0.4rem;
+			    left: 0px;
+			    width: 100%;
+			    border-top: 0.2rem solid #fff;
+
+			    .scrolled &{
+			    	border-top-color: $brand-blue;
+			    }
+
+			}
+		}
+	}
+}
